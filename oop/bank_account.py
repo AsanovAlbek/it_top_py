@@ -26,7 +26,7 @@ class Account(ABC):
         self.__name = name
 
     @abstractmethod
-    def some_abstract_kostyl():
+    def _some_abstract_kostyl(self):
         pass
 
 class BankAccount(Account, ABC):
@@ -78,7 +78,7 @@ class BankAccount(Account, ABC):
         return f"{super().__str__()},\nbalance = {self._balance},\npin={len(self._pin) * "*"},\ncard_number = {masked_card_number}"
     
     @abstractmethod
-    def some_abstract_kostyl():
+    def _some_abstract_kostyl(self):
         pass
 
 
@@ -88,7 +88,7 @@ class SberAccount(BankAccount):
         print('Создан аккаунт СБЕР')
         super().__init__(name, email, password, pin)
 
-    def some_abstract_kostyl():
+    def _some_abstract_kostyl(self):
         pass
 
 class AlfaAccount(BankAccount):
@@ -98,7 +98,7 @@ class AlfaAccount(BankAccount):
         print('Создан аккаунт Альфа-Банка')
         super().__init__(name, email, password, pin)
 
-    def some_abstract_kostyl():
+    def _some_abstract_kostyl(self):
         pass
 
 class MirAccount(BankAccount):
@@ -108,7 +108,7 @@ class MirAccount(BankAccount):
         print('Создан аккаунт МИР')
         super().__init__(name, email, password, pin)
 
-    def some_abstract_kostyl():
+    def _some_abstract_kostyl(self):
         pass
 
 class TinkoffAccount(BankAccount):
@@ -118,5 +118,5 @@ class TinkoffAccount(BankAccount):
         print('Создан аккаунт Тинькофф')
         super().__init__(name, email, password, pin)
 
-    def some_abstract_kostyl():
+    def _some_abstract_kostyl(self):
         pass

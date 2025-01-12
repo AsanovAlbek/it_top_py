@@ -31,6 +31,7 @@ for account_type in list(AccountType):
         pin="1234",
         account_type=account_type
     )
+    print(f"Secret balance {account}")
     ivan_accounts.append(account)
 
 for acc in ivan_accounts:
